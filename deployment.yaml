@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: node-app-deployment
+  name: node-app-deploy
 spec:
   replicas: 1
   selector:
@@ -13,7 +13,7 @@ spec:
         app: node-app
     spec:
       containers:
-      - name: node-app
-        image: docker push 010426082127.dkr.ecr.us-east-1.amazonaws.com/app-deploy:latest
+      - name: node-app-container
+        image: 010426082127.dkr.ecr.us-east-1.amazonaws.com/app-deploy:latest
         ports:
         - containerPort: 3000

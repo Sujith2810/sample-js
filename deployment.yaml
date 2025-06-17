@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: node-app
-        image: <your_ecr_image_uri>
+        image: docker push 010426082127.dkr.ecr.us-east-1.amazonaws.com/app-deploy:latest
         ports:
         - containerPort: 3000
